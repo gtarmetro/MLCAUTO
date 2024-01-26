@@ -1,0 +1,27 @@
+<html>
+<body>
+    <article>
+        <h1>MJ's Search Tool</h1>
+
+        <label for="tbartist"><b>Artist Name:</b></label><input type="text" id="tbartist">
+        <label for="tbtitle"><b>Song Title:</b></label><input type="text" id="tbtitle">
+        <input type="button" id="submit" value="Submit">
+        <p class="output" id="output1"></p>
+
+    </article>
+<script>
+    var exec = require('child_process').exec;
+    const txt1 = document.getElementById('tbartist');
+    const txt2 = document.getElementById('tbtitle');
+
+    function fun1() {
+        process.env.TITLE = txt2;
+        process.env.ARTIST = txt1;
+        
+    }
+
+    submit.addEventListener('click', fun1)
+
+</script>
+</body>
+</html>
